@@ -10,7 +10,7 @@ enum TokenType {
     multiline_string,
 };
 
-void *tree_sitter_COBOL_external_scanner_create() {
+void *tree_sitter_cobol_external_scanner_create() {
     return NULL;
 }
 
@@ -88,7 +88,7 @@ static bool start_with_word( TSLexer *lexer, char *words[], int number_of_words)
     return false;
 }
 
-bool tree_sitter_COBOL_external_scanner_scan(void *payload, TSLexer *lexer,
+bool tree_sitter_cobol_external_scanner_scan(void *payload, TSLexer *lexer,
                                             const bool *valid_symbols) {
     if(lexer->lookahead == 0) {
         return false;
@@ -196,12 +196,12 @@ bool tree_sitter_COBOL_external_scanner_scan(void *payload, TSLexer *lexer,
     return false;
 }
 
-unsigned tree_sitter_COBOL_external_scanner_serialize(void *payload, char *buffer) {
+unsigned tree_sitter_cobol_external_scanner_serialize(void *payload, char *buffer) {
     return 0;
 }
 
-void tree_sitter_COBOL_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
+void tree_sitter_cobol_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
 }
 
-void tree_sitter_COBOL_external_scanner_destroy(void *payload) {
+void tree_sitter_cobol_external_scanner_destroy(void *payload) {
 }
